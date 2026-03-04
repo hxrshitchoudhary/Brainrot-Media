@@ -55,11 +55,11 @@ export const AboutPage = () => {
                 </div>
                 <div className="editorial-right">
                    <motion.div className="editorial-stat-box" initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.4 }}>
-                       <h3 className="text-accent">2025</h3>
+                       <h3 className="text-accent">2024</h3>
                        <p>Founded</p>
                    </motion.div>
                    <motion.div className="editorial-stat-box" initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.5 }}>
-                       <h3 className="text-accent">120M+</h3>
+                       <h3 className="text-accent">10M+</h3>
                        <p>Views Driven</p>
                    </motion.div>
                 </div>
@@ -75,7 +75,7 @@ export const AboutPage = () => {
                         { num: "02", title: "CREATORS FIRST", desc: "We don't treat talent like billboards. We build creators into standalone empires, fostering deep, authentic connections that audiences actually trust." },
                         { num: "03", title: "DATA-DRIVEN VIRALITY", desc: "Going viral isnt luck; it's a science. We pair creative intuition with hard analytics to engineer attention and guarantee ROI." }
                     ].map((item, i) => (
-                        <motion.div key={i} className="dna-row" initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, margin: "-50px" }} transition={{ duration: 0.6, delay: i * 0.1 }}>
+                        <motion.div key={i} className="dna-row" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-50px" }} transition={{ duration: 0.6, delay: i * 0.1 }}>
                             <div className="dna-num">{item.num}</div>
                             <div className="dna-content">
                                 <h3>{item.title}</h3>
@@ -271,7 +271,7 @@ export const ContactPage = () => {
         <motion.div {...pageTransition} className="page-wrapper">
             <div className="container page-content">
                 <div className="contact-grid">
-                    <motion.div className="contact-form-col will-change-transform" initial={{ opacity: 0, x: -50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}>
+                    <motion.div className="contact-form-col will-change-transform" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}>
                         <h2 className="form-title">Send a Message</h2>
                         <form ref={form} onSubmit={sendEmail} className="cool-form">
                             <div className="input-group"><input type="text" name="user_name" placeholder="Your Name" required /></div>
@@ -292,7 +292,7 @@ export const ContactPage = () => {
                             {status === 'error' && (<p style={{ color: '#ef4444', marginTop: '15px', fontWeight: 'bold', textAlign: 'center' }}>Failed to send. Please try again. ⚠️</p>)}
                         </form>
                     </motion.div>
-                    <motion.div className="contact-text-col will-change-transform" initial={{ opacity: 0, x: 50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}>
+                    <motion.div className="contact-text-col will-change-transform" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}>
                         <div className="speed-tag"><FaBolt /> FAST RESPONSE TIME</div>
                         <h1 className="warp-title" style={{ fontSize: 'clamp(2.5rem, 8vw, 3.5rem)', lineHeight: 1.1, marginTop: '20px' }}>READY TO <br /><span className="text-accent">WORK TOGETHER?</span></h1>
                         <p className="warp-desc align-left" style={{ marginTop: '20px' }}>Whether you're a brand looking to grow or a creator ready to expand, we're here to help.</p>

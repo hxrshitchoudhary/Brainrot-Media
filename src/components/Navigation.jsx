@@ -57,19 +57,19 @@ export const Navbar = () => {
                 </button>
 
                 <div className={`nav-links ${isOpen ? 'active' : ''}`}>
-                    <Link to="/" onClick={handleHomeClick}>Home</Link>
-                    <Link to="/about" onClick={closeMenu}>About</Link>
-                    <Link to="/brands" onClick={closeMenu}>Brands</Link>
-                    <Link to="/campaigns" onClick={closeMenu}>Work</Link>
+                    <Link to="/" onClick={handleHomeClick} className="nav-item-link">Home</Link>
+                    <Link to="/about" onClick={closeMenu} className="nav-item-link">About</Link>
+                    <Link to="/brands" onClick={closeMenu} className="nav-item-link">Brands</Link>
+                    <Link to="/campaigns" onClick={closeMenu} className="nav-item-link">Work</Link>
                     
-                    <div style={{ display: isOpen ? 'block' : 'none', width: '80%', marginTop: '10px' }}>
-                        <Link to="/contact" onClick={closeMenu} style={{ width: '100%', padding: 0, background: 'transparent', border: 'none' }}>
+                    <div className="mobile-only-contact-btn">
+                        <Link to="/contact" onClick={closeMenu} style={{ width: '100%', padding: 0, background: 'transparent', border: 'none', display: 'block' }}>
                             <button className="btn btn-primary" style={{ width: '100%' }}>Book Call</button>
                         </Link>
                     </div>
                 </div>
                 
-                <div style={{ display: isOpen ? 'none' : 'block' }} className="desktop-contact-btn">
+                <div className="desktop-contact-btn">
                     <Link to="/contact">
                         <button className="btn btn-primary" style={{ padding: '10px 24px' }}>Book Call</button>
                     </Link>
